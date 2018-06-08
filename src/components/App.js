@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Notes from './Notes';
+import AddNote from './AddNote';
 
 export default class App extends Component {
 
@@ -25,6 +26,7 @@ export default class App extends Component {
 
     return (
       <div>
+        <AddNote/>
         <Notes notes={notes}/>
       </div>
     );
