@@ -15,7 +15,7 @@ export default class App extends Component {
       },
       { 
         date: new Date('3/23/2018'),
-        text: 'Creat Cool Project'
+        text: 'Create Cool Project'
       }
     ]
   };
