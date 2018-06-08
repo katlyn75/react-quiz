@@ -11,7 +11,7 @@ export default class Notes extends Component {
 
    render() {
      const { data } = this.props;
-     const date = data.date.toString();
+     let date = data.date ? data.date.toString() : null;
 
      return (
        <li>

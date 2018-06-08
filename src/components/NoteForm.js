@@ -30,7 +30,8 @@ export default class NoteForm extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label htmlFor="add Note">
-          Note:
+          New Note:
+          <br />
           <input name="note" value={text} onChange={this.handleChange}/>
         </label>
 
