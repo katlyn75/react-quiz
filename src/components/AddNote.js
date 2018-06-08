@@ -11,7 +11,7 @@ export default class AddNote extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const timestamp = new Date().toLocaleString();
+    const timestamp = new Date();
     this.props.onAdd(this.state, timestamp);
   };
 

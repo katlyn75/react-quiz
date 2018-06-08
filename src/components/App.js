@@ -21,8 +21,8 @@ export default class App extends Component {
     ]
   };
 
-  handleAdd = (note, timestamp) => {
-    const newNote = { date: timestamp, text: note };
+  handleAdd = ({ note }, timestamp) => {
+    const newNote = { date: timestamp.toLocaleString(), text: note };
     this.setState(({ notes }) => {
       notes.push(newNote);
       return { notes };
