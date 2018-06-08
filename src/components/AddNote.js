@@ -13,6 +13,7 @@ export default class AddNote extends Component {
     e.preventDefault();
     const timestamp = new Date();
     this.props.onAdd(this.state, timestamp);
+    this.setState({ note: '' });
   };
 
   render() {

@@ -35,8 +35,8 @@ export default class App extends Component {
     return (
       <div>
         <h1>Notes:</h1>
-        <AddNote onAdd={this.handleAdd}/>
         <Notes notes={notes}/>
+        <h2>Add a note:</h2> <AddNote onAdd={this.handleAdd}/>
       </div>
     );
   }
