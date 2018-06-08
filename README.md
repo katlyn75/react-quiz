@@ -4,6 +4,7 @@ This quiz is designed to test your familiarity with basic React components.
 
 ## Rules
 
+1. Use standard lab process: fork this repo and clone locally.
 1. **Make an initial commit when you start your work**
 1. You have **25 minutes** to complete what you can.
 1. You must complete this work on your own within the allotted time
