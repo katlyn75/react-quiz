@@ -10,11 +10,11 @@ This quiz is designed to test your familiarity with basic React components.
     * You **need to manage your time** to have PR and last commit before deadline (remember, you can
     open PR and push your commits frequently).
 1. You may use normal resources that a software developer uses on the job (docs, google, your prior work)
-1. You may install npm packages of your choosing, though working webpack react build system is included 
-(remember to `npm i` after cloning your forked repo!)
+1. Working webpack react build system is included (**remember to `npm i` after cloning your forked repo!**)
+1. You may install npm packages of your choosing, though probably not needed
 1. Use general best practices and common sense
     * Highly recommended to implement what is needed, no more no less
-    * Blind boilerplate may not be helpful and will likely create more work
+    * Blind boilerplate or copying in code will not be helpful and will likely create more work
     * **Focus effort on requirements of the lab**
 1. Total possible points are 50. You will be graded out of 40 points
 
