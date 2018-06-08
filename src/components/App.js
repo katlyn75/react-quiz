@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Notes from './Notes';
 
 export default class App extends Component {
 
@@ -14,7 +15,7 @@ export default class App extends Component {
       },
       { 
         date: new Date('3/23/2018'),
-        text: 'Creat Cool Project'
+        text: 'Create Cool Project'
       }
     ]
   };
@@ -22,7 +23,8 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        Quiz!
+        <h1>Quiz!</h1>
+        <Notes notes={this.state.notes}/>
       </div>
     );
   }
