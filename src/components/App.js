@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Notes from './Notes';
+import AddNote from './AddNote';
 
 export default class App extends Component {
 
@@ -20,12 +21,21 @@ export default class App extends Component {
     ]
   };
 
+  handleAdd = (note, timestamp) => {
+    const newNote = { date: timestamp, text: note };
+    this.setState(({ notes }) => {
+      notes.push(newNote);
+      return { notes };
+    });
+  };
+
   render() {
     const { notes } = this.state;
 
     return (
       <div>
         <h1>Notes:</h1>
+        <AddNote onAdd={this.handleAdd}/>
         <Notes notes={notes}/>
       </div>
     );
