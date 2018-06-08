@@ -27,7 +27,7 @@ export default class App extends Component {
       <div>
         <h1>Quiz</h1>
         <div className="list-container">
-          <Note notes={notes.date}{...notes.text}/>,
+          <Note notes={notes.date}/>,
         </div>
       </div>
     );
