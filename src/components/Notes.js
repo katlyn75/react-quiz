@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Note from './Note';
+// import NoteForm from './NoteForm';
 
 
 export default class Notes extends Component {
@@ -22,11 +23,8 @@ export default class Notes extends Component {
             note={note}
           />)}
         </ul>
+        {/* <NoteForm onComplete={}/> */}
       </div>
-
     );
   }
-
-
-
 }
