@@ -26,6 +26,7 @@ export default class App extends Component {
     const { notes } = this.state;
     return (
       <div>
+        <h1>Notes!</h1>
         <Notes notes={notes}/>
       </div>
     );
