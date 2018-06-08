@@ -10,12 +10,13 @@ export default class Notes extends Component {
    };
 
    render() {
-     const { data } = this.state;
+     const { data } = this.props;
+     const date = data.date.toString();
 
      return (
        <li>
-         <span>Added: {data.date} </span>
          <p> {data.text}</p>
+         <span>Added: {date} </span>
        </li>  
      );
    }

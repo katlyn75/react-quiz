@@ -11,12 +11,12 @@ export default class Notes extends Component {
    };
 
    render() {
-     const { notes } = this.state;
+     const { notes } = this.props;
 
      return (
        <ul>
-         {notes.map(note => (
-           <Note key={note.key}
+         {notes.map((note, index) => (
+           <Note key={index}
              data={note} />
          ))}
        </ul>  
