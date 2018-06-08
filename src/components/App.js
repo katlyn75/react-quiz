@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Note from './Note';
 
 export default class App extends Component {
 
@@ -20,9 +21,14 @@ export default class App extends Component {
   };
 
   render() {
+
+    const { notes } = this.state;
     return (
       <div>
-        Quiz
+        <h1>Quiz</h1>
+        <div className="list-container">
+          <Note notes={notes.date}{...notes.text}/>,
+        </div>
       </div>
     );
   }
