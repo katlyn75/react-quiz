@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-export default class App extends Component {
+export default class Note extends Component {
 
-  render() {
-    return (
-      <div>
-        This is a note
-      </div>
-    );
-  }
+    static propTypes = {
+      text: PropTypes.string,
+      date: PropTypes.date
+    }; 
+
+    render() {
+      const { text, date } = this.props;
+
+      return (
+        <li>
+          <h3>Note from <span>{date.toLocaleString()}</span></h3>
+          <p>{text}</p>
+        </li>
+      );
+    }
 }

@@ -10,11 +10,11 @@ export default class Notes extends Component {
 
   render() {
     const { notes } = this.props;
-
+    
     return (
       <ul>
         {notes.map(note => (
-          <Note key={note}/>
+          <Note key={note.text} {...note}/>
         ))}
       </ul>
     );
