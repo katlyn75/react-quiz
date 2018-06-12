@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Notes from './Notes';
 
 export default class App extends Component {
 
@@ -14,15 +15,19 @@ export default class App extends Component {
       },
       { 
         date: new Date('3/23/2018'),
-        text: 'Creat Cool Project'
+        text: 'Create Cool Project'
       }
     ]
   };
 
   render() {
+
+    const { notes } = this.state;
+
     return (
       <div>
-        Quiz
+        Notes Quiz
+        <Notes notes={notes}/>
       </div>
     );
   }
