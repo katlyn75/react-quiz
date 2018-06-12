@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Notes from './Notes';
+import AddNote from './AddNote';
 
 export default class App extends Component {
 
@@ -14,15 +16,27 @@ export default class App extends Component {
       },
       { 
         date: new Date('3/23/2018'),
-        text: 'Creat Cool Project'
+        text: 'Create Cool Project'
       }
     ]
   };
 
+  handleAdd = ({ note }, timestamp) => {
+    const newNote = { date: timestamp.toLocaleString(), text: note };
+    this.setState(({ notes }) => {
+      notes.push(newNote);
+      return { notes };
+    });
+  };
+
   render() {
+    const { notes } = this.state;
+
     return (
       <div>
-        Quiz
+        <h1>Notes:</h1>
+        <Notes notes={notes}/>
+        <h2>Add a note:</h2> <AddNote onAdd={this.handleAdd}/>
       </div>
     );
   }
