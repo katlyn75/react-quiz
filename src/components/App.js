@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Notes from './Notes';
+import NoteForm from './NoteForm';
 
 export default class App extends Component {
 
@@ -19,10 +21,20 @@ export default class App extends Component {
     ]
   };
 
+  handleAdd = note => {
+    this.setState(({ notes }) => {
+      notes.push(note);
+      return { notes };
+    });
+  };
+
   render() {
+    const { notes } = this.state;
     return (
       <div>
-        Quiz
+        <h1>Notes</h1>
+        <NoteForm onComplete={this.handleAdd} label="Add"/>
+        <Notes notes={notes}/>
       </div>
     );
   }
