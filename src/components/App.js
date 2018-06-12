@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Notes from './Notes';
+import AddNote from './AddNote';
 
 export default class App extends Component {
 
@@ -20,9 +22,12 @@ export default class App extends Component {
   };
 
   render() {
+    const { notes } = this.state;
+
     return (
       <div>
-        Quiz
+        <AddNote/>
+        <Notes notes={notes}/>
       </div>
     );
   }
