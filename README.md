@@ -6,7 +6,7 @@ This quiz is designed to test your familiarity with basic React components. Ther
 
 1. Use standard lab process: fork this repo and clone locally.
 1. **Make an initial commit when you start your work**
-1. You have **25 minutes** to complete what you can.
+1. You have **35 minutes** to complete what you can.
 1. You must complete this work on your own within the allotted time
     * You **need to manage your time** to have PR and last commit before deadline (remember, you can
     open PR and push your commits frequently).
@@ -29,9 +29,9 @@ This quiz is designed to test your familiarity with basic React components. Ther
 Build an app that displays a list of taks. Use the following component structure:
 
 * `App` - top level App component. **Notice that the component already has state of array of tasks**
-  * `Tasks` - component that accepts an array of tasks to display and creates a list with a `Task` component for each note
-    * `Task` - component that accepts a note and displays the text of the note. For the level, display "easy" if 1, "medium" if 2, and "hard" if 3
-  * **BONUS, not required** Remove a task
+  * `Tasks` - component that accepts an array of tasks to display and creates a list with a `Task` component for each task
+    * `Task` - component that accepts a task and displays the text and level of the task. For the level, display "easy" if 1, "medium" if 2, and "hard" if 3
+  * Remove a task
     1. Create a `handleRemove` method in `App` that takes a task and updates the state to remove that task from the array
-    1. Pass the callback function from `App` to `Tasks` and pass on to `Task`
+    1. Pass the callback function to an `onRemove` prop from `App` to `Tasks` and then from `Tasks` to `Task`
     1. Put a button in `Task` that, when clicked, will call the callback function with the task being removed.
