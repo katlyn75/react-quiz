@@ -3,18 +3,18 @@ import React, { Component } from 'react';
 export default class App extends Component {
 
   state = {
-    notes: [
+    tasks: [
       { 
-        date: new Date('2/12/2018'),
-        text: 'Learn React'
+        text: 'Learn React',
+        level: 2
       },
       { 
-        date: new Date('2/27/2018'),
-        text: 'Learn Redux'
+        text: 'Learn Redux',
+        level: 3
       },
       { 
-        date: new Date('3/23/2018'),
-        text: 'Creat Cool Project'
+        text: 'Creat Cool Project',
+        level: 1
       }
     ]
   };
@@ -22,7 +22,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        Quiz
+        Quiz FTW!
       </div>
     );
   }
