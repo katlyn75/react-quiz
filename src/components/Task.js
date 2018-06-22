@@ -11,6 +11,13 @@ export default class extends Component {
     }
   
   }
+  
+    return (
+      <a href="#" onClick={handleClick}>
+        Click me
+      </a>
+    );
+  
 
   render() {
     const { task } = this.props;
@@ -18,9 +25,11 @@ export default class extends Component {
 
     return (
       <section className={styles.task}>
+        <button onClick={deleteTask}>
         <Task task={ currentTask } onClick={this.handleClick} />
         <h3>{text}</h3>
         <h4>{level}</h4>
+        </button>
       </section>
     );
   }
