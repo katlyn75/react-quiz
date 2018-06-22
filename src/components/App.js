@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import Task from './Task';
 
 export default class App extends Component {
 
@@ -13,7 +15,7 @@ export default class App extends Component {
         level: 3
       },
       { 
-        text: 'Creat Cool Project',
+        text: 'Create Cool Project',
         level: 1
       }
     ]
@@ -21,9 +23,14 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
-        Quiz FTW!
-      </div>
+      <Router>
+        <div>
+          <Switch>
+            <Route path="/" component={Task}/>
+            <Redirect to="/" />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
